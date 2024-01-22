@@ -89,10 +89,12 @@ async function main() {
 
   console.log("Deploying contracts with the account:", deployer.address);
 
-  const HugToken = await ethers.getContractFactory("HugToken");
-  const hugToken = await HugToken.deploy();
+  const MicroCoin = await ethers.getContractFactory("MicroCoin"); // Pastikan nama kontrak sesuai dengan yang Anda gunakan
+  const microCoin = await MicroCoin.deploy(deployer.address); // Sesuaikan argumen konstruktor sesuai kebutuhan kontrak
 
-  console.log("HugToken address:", hugToken.target);
+  await microCoin.waitForDeployment();
+
+  console.log("MicroCoin deployed to:", microCoin.target);
 }
 
 main()
@@ -101,6 +103,7 @@ main()
     console.error(error);
     process.exit(1);
   });
+
 
 ```
 
