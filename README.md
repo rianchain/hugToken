@@ -1,4 +1,4 @@
-# How to create token crypto with hardhat 
+# How to create crypto tokens ERC20 with hardhat 
 
 
 ### GETTING STARTED WITH VISUAL STUDIO CODE
